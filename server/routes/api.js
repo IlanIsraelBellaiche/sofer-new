@@ -1,5 +1,8 @@
 const {Router} = require('express');
 
+/**
+ * Queries
+ */
 /* const getCatalog = require('../controllers/getCatalog');
 const getCategory = require('../controllers/getCategory');
 const postMessage = require('../controllers/postMessage');
