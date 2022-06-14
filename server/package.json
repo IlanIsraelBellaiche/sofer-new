@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "deploy": "gcloud app deploy --project sofer-server --quiet",
+    "doc": "jsdoc -c jsdoc.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ilan Israel Bellaiche",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/firestore": "^5.0.2",
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.10"
+  }
+}
