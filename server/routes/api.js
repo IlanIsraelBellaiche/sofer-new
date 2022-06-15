@@ -11,7 +11,7 @@ const router = Router();
 // The queries
 router.get('/getCatalog', getCatalog);
 router.get('/getCollection', getCollection);
-router.get('/getBanniere', getBanniere);
+// router.get('/getBanniere', getBanniere); 
 
 router.post('/postMessage', postMessage);
 

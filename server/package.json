@@ -7,8 +7,7 @@
     "start": "nodemon index.js",
     "dev": "nodemon index.js",
     "deploy": "gcloud app deploy --project sofer-server --quiet",
-    "doc": "jsdoc -c jsdoc.json",
-    "generate-docs": "jsdoc --configure jsdoc.json --verbose",
+    "doc": "jsdoc --configure jsdoc.json --verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,7 +19,8 @@
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "express": "^4.18.1",
-    "jsdoc-to-markdown": "^7.1.1"
+    "jsdoc-to-markdown": "^7.1.1",
+    "nodemon": "^2.0.16"
   },
   "devDependencies": {
     "clean-jsdoc-theme": "^4.0.5",
