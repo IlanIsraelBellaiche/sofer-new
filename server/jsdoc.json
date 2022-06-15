@@ -1,7 +1,9 @@
 {
     "source": {
         "include": [
-            "index.js"
+            "index.js",
+            "routes",
+            "controllers"
         ],
         "includePattern": ".js$",
         "excludePattern": "(nodes_modules/|docs)"
@@ -12,7 +14,27 @@
         "monospaceLinks": true
     },
     "opts": {
+        "encoding": "utf8",
+        "verbose": true,
         "recurse": true,
-        "destination": "./docs/"
+        "destination": "./docs/",
+        "template": "./node_modules/clean-jsdoc-theme",
+        "theme_opts": {
+            "default_theme": "dark",
+            "sections": [
+                "Global",
+                "Modules",
+                "Externals",
+                "Interfaces"
+            ],
+            "add_style_path": [
+                "* { font-size: 14px }",
+                ".sidebar-section-title { font-size: 1.25rem }"            
+            ]
+        },
+        "markdown": {
+            "hardwrap": false,
+            "idInHeadings": true
+        }
     }
 }

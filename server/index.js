@@ -9,14 +9,11 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-/**
- * Get the routes of the requests
- */
+// Get the routes of the requests
+
 const apiRoutes = require("./routes/api");
 
-/**
- * Define the port who the server is launched
- */
+// Define the port who the server is launched
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -29,3 +26,4 @@ app.use("/api", apiRoutes);
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
+

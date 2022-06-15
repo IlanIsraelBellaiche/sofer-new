@@ -1,19 +1,18 @@
 const {Router} = require('express');
 
-/**
- * Queries
- */
-/* const getCatalog = require('../controllers/getCatalog');
-const getCategory = require('../controllers/getCategory');
+// Import the queries
+const getCatalog = require('../controllers/getCatalog');
+const getCollection = require('../controllers/getCollection');
 const postMessage = require('../controllers/postMessage');
-const getBanniere = require('../controllers/getBanniere'); */
+// const getBanniere = require('../controllers/getBanniere');
 
 const router = Router();
 
-/* router.get('/getCatalog', getCatalog);
-router.get('/getCategory', getCategory);
+// The queries
+router.get('/getCatalog', getCatalog);
+router.get('/getCollection', getCollection);
 router.get('/getBanniere', getBanniere);
 
-router.post('/postMessage', postMessage); */
+router.post('/postMessage', postMessage);
 
 module.exports = router;
