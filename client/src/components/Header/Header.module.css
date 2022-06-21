@@ -1,0 +1,40 @@
+.Header {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px black solid;
+    align-items: center;
+    padding: 0 20px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.hamburgerMenu, .hamburgerMenuDiv {
+    height: 30px;
+    width: 30px;
+}
+
+.hamburgerMenu:hover, .hamburgerMenuDiv:hover {
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.leftHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10%;
+    width: 15%;
+}
+
+.connexionButton {
+    width: max-content;
+    height: fit-content;
+}

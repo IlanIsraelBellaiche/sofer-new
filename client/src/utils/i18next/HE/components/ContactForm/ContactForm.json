@@ -1,0 +1,10 @@
+{
+    "name": "*שם",
+    "email": "*אימייל",
+    "phone": "טלפון",
+    "message": "*הודעה",
+    "send": "שלח",
+    "placeholderMessage": "כתב את ההודעה כאן",
+    "obligatoire": "שדה חובה",
+    "invalidEmail": "אימייל לא חוקי"
+}

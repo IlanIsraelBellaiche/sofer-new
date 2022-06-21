@@ -1,0 +1,10 @@
+{
+    "name": "*Name",
+    "email": "*Email",
+    "phone": "Phone number",
+    "message": "*Message",
+    "send": "Send",
+    "placeholderMessage": "Write your message here",
+    "obligatoire": "Obligated field",
+    "invalidEmail": "Invalid email"
+}

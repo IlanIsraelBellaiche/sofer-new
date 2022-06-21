@@ -1,5 +1,7 @@
 const { firestore } = require("../database/database");
 
+/* //@ts-check */
+
 /**
  * @typedef {object} Collection
  * @property {string} namefr The name in French 
@@ -15,6 +17,7 @@ const { firestore } = require("../database/database");
  */
 const getCatalog = async (req, res, next) => {
     try {
+        console.log("GETCATALOG");
         let response = {};
 
         // Get the collection
