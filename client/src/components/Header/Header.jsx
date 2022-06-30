@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import Button from "@mui/material/Button";
 
@@ -31,20 +32,40 @@ const Header = ({ openSideBar }) => {
       </div>
       {/* Header Middle (Menu) */}
       <div className={styles.navbar}>
-        <div>{t("Page d'accueil")}</div>
-        <div>{t("Catalogue")}</div>
-        <div>{t("A propos")}</div>
-        <div> {t("Contact")} </div>
+        <NavLink
+          className={styles.link}
+          to="/"
+        >
+          {t("Page d'accueil")}
+        </NavLink>
+        <NavLink
+          className={styles.link}
+          to="/catalog"
+        >
+          {t("Catalogue")}
+        </NavLink>
+        <NavLink
+          className={styles.link}
+          to="/about"
+        >
+          {t("A propos")}
+        </NavLink>
+        <NavLink
+          className={styles.link}
+          to="/contact"
+        >
+          {t("Contact")}
+        </NavLink>
       </div>
       {/* Header Left (Buttons: Sign In + Languagues) */}
       <div className={styles.leftHeader}>
-        <Button
+        {/* <Button
           variant="contained"
           size="small"
           className={styles.connexionButton}
         >
           Sign In
-        </Button>
+        </Button> */}
         <Languages />
       </div>
     </div>

@@ -2,16 +2,21 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { requestCatalog } from "./Request/RequestCatalog.js";
-
 import "./App.css";
 
 // Pages imports
 import HomePage from "./Pages/HomePage/HomePage";
+import CatalogPage from "./Pages/CatalogPage/CatalogPage";
+import AboutPage from "./Pages/AboutPage/AboutPage";
+import ContactPage from "./Pages/ContactPage/ContactPage";
+import ItemPage from "./Pages/ItemPage/ItemPage";
+
+import AddItemForm from "./Forms/AddItemForm/AddItemForm.jsx";
 
 // Components imports
 import Header from "./components/Header/Header";
 import SideBar from "./components/SideBar/SideBar";
+import Footer from "./components/Footer/Footer";
 
 // Icons import
 import croixIcon from "./icons/croixIcon.png";
@@ -24,8 +29,6 @@ import croixIcon from "./icons/croixIcon.png";
  * @exports
  */
 function App() {
-  // Get all the catalog
-  const [catalog, setCatalog] = useState();
   // For mobile.
   const [openSideBar, setOpenSideBar] = useState(false);
 
@@ -33,27 +36,10 @@ function App() {
     ...state.languageReducer,
   }));
 
-  /**
-   * Get all the catalog.
-   */
-  useEffect(() => {
-    requestCatalog.getActive().then((res) => {
-      setCatalog(res.data.catalog);
-
-      /**
-       * @todo Enlever le dispatch
-       */
-      /* dispatch({
-        type: "setCatalog",
-        value: res.data.catalog,
-      }); */
-    });
-  }, []);
-
   return (
     <div
       className="App"
-      style={{ direction: defaultLanguage === "he" ? "rtl" : "ltr" }}
+      style={{ direction: defaultLanguage === "He" ? "rtl" : "ltr" }}
     >
       <Header
         openSideBar={() => {
@@ -73,8 +59,19 @@ function App() {
       )}
 
       <Routes>
-        <Route path="/" element={<HomePage catalog={catalog} />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="catalog" element={<CatalogPage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="contact" element={<ContactPage />} />
+
+        <Route path="catalog/:categoryName" element={<CatalogPage />} />
+        <Route path="catalog/:categoryName/:itemId" element={<ItemPage />} />
+
+        {/* TESTS */}
+        <Route path="add" element={<AddItemForm />} />
       </Routes>
+
+        <Footer />
     </div>
   );
 }

@@ -38,3 +38,23 @@
     width: max-content;
     height: fit-content;
 }
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+    .Header {
+        font-size: 12px;
+        padding: 0;
+    }
+
+    .hamburgerMenuDiv, .leftHeader {
+        padding: 0 5px;
+    }
+
+
+}

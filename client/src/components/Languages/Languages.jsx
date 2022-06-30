@@ -5,9 +5,9 @@ import i18n from "i18next";
 
 import styles from "./Languages.module.css";
 
-import fr from "../../icons/france.png";
-import he from "../../icons/israel.png";
-import en from "../../icons/united-kingdom.png";
+import Fr from "../../icons/france.png";
+import He from "../../icons/israel.png";
+import En from "../../icons/united-kingdom.png";
 
 /**
  * Languages component.
@@ -27,9 +27,9 @@ const Languages = () => {
   }));
 
   const listLanguage = {
-    fr: fr,
-    he: he,
-    en: en,
+    Fr: Fr,
+    He: He,
+    En: En,
   };
 
   const change_language = (e) => {
@@ -46,8 +46,8 @@ const Languages = () => {
     <div
       className={`${styles.languages} ${styles.dropdown}`}
       style={{
-        right: defaultLanguage === "he" ? "5vw" : "",
-        left: defaultLanguage !== "he" ? "5vw" : "",
+        right: defaultLanguage === "He" ? "5vw" : "",
+        left: defaultLanguage !== "He" ? "5vw" : "",
       }}
     >
       <div>
@@ -63,7 +63,7 @@ const Languages = () => {
       <div
         style={{ display: toggle ? "flex" : "none" }}
         className={`${styles.dropdownContent} ${
-          defaultLanguage === "he"
+          defaultLanguage === "He"
             ? styles.dropdownContentRTL
             : styles.dropdownContentLTR
         }`}

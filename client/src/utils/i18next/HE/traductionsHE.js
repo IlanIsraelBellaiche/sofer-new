@@ -10,7 +10,7 @@ import AboutTrad from "./components/AboutTrad/AboutTrad.json";
 // Pages
 import ContactPage from "./pages/ContactPage/ContactPage.json";
 
-const he = {
+const He = {
     // components
     HeaderTrad: HeaderTrad,
     FooterTrad: FooterTrad,
@@ -24,4 +24,4 @@ const he = {
     ContactPage: ContactPage
 };
 
-export default he;
+export default He;

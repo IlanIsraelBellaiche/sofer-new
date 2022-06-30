@@ -7,7 +7,7 @@ import styles from "./SideBar.module.css";
  * Contains all the menu.
  * @component
  * @exports
- * @returns 
+ * @todo Arranger la croix dans les langues LTR.
  */
 const SideBar = () => {
     return (

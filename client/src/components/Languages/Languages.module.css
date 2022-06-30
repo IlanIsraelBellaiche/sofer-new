@@ -39,8 +39,12 @@
     left: 20px;
 }
 
-@media only screen and (max-width: 600px) {
-    .languages {
-        position: relative;
+@media only screen and (max-width: 480px) {
+    .dropdownContentRTL {
+        left: 0;
+    }
+
+    .dropdownContentLTR {
+        right: 0;
     }
 }
