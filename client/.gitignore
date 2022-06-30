@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+**/auth
 
 # testing
 /coverage
@@ -17,8 +18,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
-**/auth
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/Conf/Conf.jsx
